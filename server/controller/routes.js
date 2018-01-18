@@ -40,7 +40,6 @@ router.get("/api/scrape", function(req, res) {
 			// table.each(function() {
 				var tr = $(this).find("tr");
 				tr.each(function() {
-					var statsCounter = 0; // is this in the right place?
 					var team = $(this).find("td").eq(1).text().trim();
 					// console.log(team);
 					var ppg = $(this).find("td").eq(2).text().trim();
