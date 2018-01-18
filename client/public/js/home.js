@@ -32,6 +32,18 @@ $(document).ready(function() {
 			// console.log(res[teamCounter].team);
 			// console.log(res[teamCounter].ppg);
 			$("#team-info").append(teamStatsName + " - ").append(ppgStats);
+
+			if (teamCounter < 1) {
+				$('#prev-button').hide();
+			} else {
+				$('#prev-button').show();
+			}
+
+				if (teamCounter == (res.length -1)) { // eslint-disable-line
+					$("#next-button").hide();
+				} else {
+					$("#next-button").show();
+				}
 		});
 
 		$("#prev-button").click(function() {
@@ -44,6 +56,18 @@ $(document).ready(function() {
 			// console.log(teamCounter);
 			// console.log("prev clicked!");
 			$("#team-info").append(teamStatsName + " - ").append(ppgStats);
+
+			if (teamCounter < 1) {
+				$('#prev-button').hide();
+			} else {
+				$('#prev-button').show();
+			}
+
+			if(teamCounter == (res.length - 1)) { // eslint-disable-line
+				$('#next-button').hide();
+			} else {
+				$('#next-button').show();
+			}
 		});
 	});
 });
