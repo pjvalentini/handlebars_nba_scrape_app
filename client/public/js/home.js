@@ -33,6 +33,8 @@ $(document).ready(function() {
 			// console.log(res[teamCounter].ppg);
 			$("#team-info").append(teamStatsName + " - ").append(ppgStats);
 
+// these conditionals keep the range of stats intact and will prevent
+// you from going pasts the values on next and prev side.
 			if (teamCounter < 1) {
 				$('#prev-button').hide();
 			} else {
@@ -57,6 +59,8 @@ $(document).ready(function() {
 			// console.log("prev clicked!");
 			$("#team-info").append(teamStatsName + " - ").append(ppgStats);
 
+// these conditionals keep the range of stats intact and will prevent
+// you from going pasts the values on next and prev side.
 			if (teamCounter < 1) {
 				$('#prev-button').hide();
 			} else {
