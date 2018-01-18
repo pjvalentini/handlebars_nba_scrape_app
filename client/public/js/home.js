@@ -15,26 +15,35 @@ $(document).ready(function() {
 			text: res[0].ppg,
 		});
 		// console.log(res[0].ppg);
-		$("#team-info").append(teamName).append(pointsPG);
+		// $("#team-info").append(teamName).append(pointsPG);
 
 		var teamCounter = 0;
 
-		$("#next-button").click(function(index) {
-			 console.log("next clicked!");
+		$("#prev-button").hide();
+
+		$("#next-button").click(function() {
 			$("#team-info").empty();
-			res[teamCounter].team;
-			res[teamCounter].ppg;
+			$("#prev-button").show();
+			var teamStatsName = res[teamCounter].team;
+			var ppgStats = res[teamCounter].ppg;
 			teamCounter++;
-			console.log(teamCounter);
+			// console.log(teamCounter);
+			// console.log("next clicked!");
+			// console.log(res[teamCounter].team);
+			// console.log(res[teamCounter].ppg);
+			$("#team-info").append(teamStatsName + " - ").append(ppgStats);
 		});
 
 		$("#prev-button").click(function() {
 			$("#team-info").empty();
-			res[teamCounter].team;
-			res[teamCounter].ppg;
+			var teamStatsName = res[teamCounter].team;
+			var ppgStats = res[teamCounter].ppg;
 			teamCounter--;
-			console.log(teamCounter);
-			console.log("prev clicked!");
+			// console.log(res[teamCounter].team);
+			// console.log(res[teamCounter].ppg);
+			// console.log(teamCounter);
+			// console.log("prev clicked!");
+			$("#team-info").append(teamStatsName + " - ").append(ppgStats);
 		});
 	});
 });

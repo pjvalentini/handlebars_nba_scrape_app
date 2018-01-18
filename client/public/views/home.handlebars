@@ -3,31 +3,14 @@
 
 <div class="container">
 	<h1>NBA Team PPG Scrape App</h1>
-	<h3 class="text-center">2017-2018 NBA Team Stats - PPG Average by Team</h3>
+	<h3>2017-2018 NBA Team Stats - PPG Average by Team</h3>
+	<h4>Click the next and prev buttons to scroll through the stats!</h4>
 	<div>
-		<table class="table">
-			<thead>
-				<tr>
-					<th>#</th>
-					<th>Team</th>
-					<th>PPG</th>
-				</tr>
-			</thead>
 			<div class="button-div">
+				<br>
 				<button type="button" id="prev-button" class="btn btn-primary">Prev Team</button>
 				<button type="button" id="next-button" class="btn btn-primary">Next Team</button>
 				<div id="team-info"></div>
 			</div>
-			<tbody>
-				{{#each stats}}
-					<tr>
-						{{!-- Look for 'inc' in the helpers --}}
-						<td>{{inc @index}}</td>
-						<td>{{this.team}}</td>
-						<td>{{this.ppg}}</td>
-					</tr>
-				{{/each}}
-			</tbody>
-		</table>
 	</div>
 </div>
