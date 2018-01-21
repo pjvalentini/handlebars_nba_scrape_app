@@ -30,7 +30,7 @@ router.get("/api/scrape", function(req, res) {
 			throw err;
 		}
 		var $ = cheerio.load(html);
-		var results = []; // change to {} ??
+		var results = [];
     // look for the containing div that holds the entire table you want to scrape.
     // $('.tablehead') in this case. Find this in the console => elements
 		$('.tablehead').each(function(index, element) {
